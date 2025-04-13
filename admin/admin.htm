@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="shortcut icon" href="/admin.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <header class="min-h-[65px] container mx-auto bg-blue-400 p-2 flex justify-between items-center">
+        <a href="/admin/admin.htm" class="text-blue-900 text-xl font-[600]">Admin Səhifəsi</a>
+            <button onclick="signOut()" class="rounded-lg bg-blue-800 p-2 text-white">Çıxış edin
+                <i class="fa-solid px-1 text-[13px] fa-arrow-right-from-bracket"></i>
+            </button>
+    </header>
+
+    <div id="content" class="fixed z-[999] inset-0 grid place-items-center bg-white">
+        <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-blue-700"></div>
+    </div>
+
+    <div class="backdrop-blur-sm inset-0 place-items-center">
+        <div class="container m-auto py-6">
+            <button onclick="openNewsDiv()"
+                class="w-[200px] block mx-auto text-white cursor-pointer bg-blue-700 shadow-2xl rounded-[15px] px-2 py-3">Xəbər əlavə edin...</button>
+            <h1 class="text-[32px] text-center font-bold my-10">Xəbərlər</h1>
+            <table class="max-w-full w-full grid-cols-12 justify-center max-sm:grid-cols-4">
+                <thead>
+                    <tr class="min- font-bold bg-blue-700 text-white text-xl h-50">
+                        <td class="p-2">Şəkil</td>
+                        <td class="p-2">Başlıq</td>
+                        <td class="p-2">Ümumi məlumat</td>
+                        <td class="p-2">Tarix</td>
+                        <td class="p-2">Baxış Sayı</td>
+                        <td class="p-2">Populyarlıq</td>
+                        <td class="p-2">Sil</td>
+                        <td class="p-2">Edit</td>
+                    </tr>
+                </thead>
+                <tbody id="tableDiv"></tbody>
+
+            </table>
+        </div>
+</div>
+
+<div id="newsDiv" onclick="openNewsDiv()" class="fixed hidden grid overflow-y-auto inset-0 backdrop-blur-sm  place-items-center">
+    <div onclick="event.stopPropagation()"
+        class="border-[2px] mt-20 shadow-[0_0_15px_5px] shadow-gray-400 w-[450px] border-blue-700 bg-[#d1d5db] rounded-xl p-3">
+        <p class="text-blue-700 mb-8 text-[30px] font-bold text-center">Xəbər Yerləşdirin</p>
+           <label for="img" class="text-blue-700 font-bold">Şəkil əlavə edin:</label>
+        <input id="img" class="w-full p-1 outline-none my-2 border border-[#eee] rounded"
+            type="text" />  
+
+            <label for="title" class="text-blue-700 font-bold">Başlıq əlavə edin:</label>
+            <input id="title" class="w-full p-1 outline-none my-2 border border-[#eee] rounded"
+                type="text" />
+
+        <label for="desc" class="text-blue-700 font-bold">Ümumi məlumatlar:</label>
+        <textarea id="desc" class="w-full p-1 outline-none my-2 border border-[#eee] rounded h-[150px]"
+            type="text"></textarea>
+
+        <label for="date" class="text-blue-700 font-bold">Tarix əlavə edin:</label>
+        <input id="date" class="w-full p-1 outline-none my-2 border border-[#eee] rounded"
+            type="date" />
+
+        <label for="view" class="text-blue-700 font-bold">Baxış Sayı:</label>
+        <input id="view" class="w-full p-1 outline-none my-2 border border-[#eee] rounded"
+            type="number" />
+
+        <label for="is_popular" class="text-blue-700 font-bold">Xəbərin Populyarlığı:</label>
+        <input id="is_popular" class="border mb-12 border-gray-500 rounded" type="checkbox" />
+        <button id="accessBtn" onclick="createNews()"
+            class="w-[190px] block m-auto mt-4 text-white cursor-pointer bg-blue-700 rounded-[7px] py-2">Göndər</button>
+    </div>
+</div>
+
+    <script src="../js/verify.js"></script>
+    <script src="../js/admin.js"></script>
+    <script src="../js/signout.js"></script>
+    <script src="https://cdn.tiny.cloud/1/2357mz26xvmwa60tlvil03db24itb0eminndc352s16srym9/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+    tinymce.init({
+        selector: 'textarea',
+        plugins: [
+        'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount',
+        ],
+        toolbar: 'blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+    </script>
+
+</body>
+</html>

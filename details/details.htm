@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oxu-Az</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="shortcut icon" href="../oxuaz.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        #desktopBars{
+           display: none;
+        }
+        #desktopBars.show {
+           display: block;
+       }
+       </style>
+</head>
+<body>
+    <header class="fixed top-0 left-0 right-0 z-50 py-1 bg-white">
+        <div class="container mx-auto flex items-center justify-between p-4">
+            <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="p-2">
+                <img class="max-w-[118px]" src="../img/oxu.logo.svg" alt="logo" />
+            </a>
+
+                <ul class="flex overflow-scroll-x overflow-auto gap-8 max-scr:gap-3 max-md:hidden" style="scrollbar-width: none;">
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="px-2 rounded-[20px] py-1 bg-red-500 text-white flex items-center">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <span class="px-2">Live</span>
+                        </a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex px-1 items-center max-w-[100px] justify-center max-lg:w-[130px] max-xl:w-[180px] border rounded-[20px] border-gray-300">İlham Əliyev</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex px-1 items-center max-w-[200px] justify-center max-lg:w-[230px] max-xl:w-[260px] border rounded-[20px] border-gray-300">Myanmada güclü zəlzələ</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex px-1 items-center max-w-[130px] justify-center max-lg:w-[160px] max-xl:w-[180px] border rounded-[20px] border-gray-300">Hava proqnozu</a>
+                    </li>
+                    <li class="flex">
+                        <a rel="noopener noreferrer" href="#" class="flex px-1 items-center max-w-[230px] justify-center max-lg:w-[260px] max-xl:w-[280px] border rounded-[20px] border-gray-300">Neokolonializmlə mübarizə</a>
+                    </li>
+                </ul>
+
+                <div class="gap-5 text-[20px] text-gray-500 flex-shrink-0 items-center lg:flex max-md:hidden">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+        
+                    <button id="barsChange1" onclick="openDesktopBars()" class="cursor-pointer">
+                        <i class="fa-solid px-2 fa-bars"></i>
+                    </button>
+                
+                    <button id="barsChange2" onclick="closeDesktopBars()" class="cursor-pointer hidden">
+                        <i class="fa-solid px-2 fa-xmark"></i>
+                    </button>
+                </div>
+
+                <div class="md:hidden items-center flex gap-4 p-4">
+                     <i class="fa-solid fa-magnifying-glass text-xl text-gray-600"></i>
+                     <a class="border-2 border-gray-700 rounded-[35%] w-[33px] h-[23px] px-1 flex justify-start items-center text-[#191C1C] hover:bg-[#191C1C] hover:text-white transition-all"
+                     href="#">
+                     Az
+                    </a>
+                    <button id="barsMobile1" onclick="openMobileMenu()" class="cursor-pointer text-2xl text-gray-600">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                
+                    <button id="barsMobile2" onclick="closeMobileMenu()" class="cursor-pointer hidden text-2xl text-gray-600">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+        </div>
+
+        <div id="desktopBars" class="p-10 max-md:hidden">
+            <ul class="grid grid-cols-6 max-scr:grid-cols-3 max-sm:grid-cols-2 gap-5 py-[5px] px-[16px] text-[#051d39] transition-all duration-500 ease-in-out container mx-auto mb-16">
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Ana səhifə</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Siyasət</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>İqtisadiyyat</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Cəmiyyət</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Ordu</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Şou-biznes</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Kriminal</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>İdman</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Mədəniyyət</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Dünya</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Hadisə</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Müsahibə</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Turizm</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>İKT</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Baku TV</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>CineMastercard</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Digər</li></a>
+                <a class="rounded-[30px] text-[16px] p-2 flex items-center justify-center border border-gray-300 font-[600] transition-all hover:bg-gray-200" href=""><li>Maraqlı</li></a>
+            </ul>
+
+            <div class="flex max-xs:flex-wrap items-center justify-between ml-10">
+                <div>
+                    <h3 class="text-[#191c1c] font-[600]">Karyera</h3>
+                    <a class="text-[#313131]" href="">cv@oxu.az</a>
+                </div>
+                <div>
+                    <h3 class="text-[#191c1c] font-[600]">Ümumi sorğular üçün</h3>
+                    <p class="text-[#313131]">
+                        <a href="">editor@oxu.az</a>,
+                        <a href="">055 224 76 86</a>,
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="openClose"
+        class="h-screen w-full p-4 fixed z-50 bottom-[-100%] bg-white transition-all duration-500 ease-in-out md:hidden">
+        
+        <div onclick="closeMobileMenu()" class="flex container py-5 mx-auto items-center justify-between  text-[22px] text-gray-600">
+            <div>
+                <a href="">
+                    <img class="max-w-[90px]" src="../img/oxu.logo.svg" alt="logos" />
+                </a>
+            </div>
+            <div class="flex items-center gap-6 justify-center">
+                <a class="border-2 border-gray-700 rounded-[35%] w-[28px] h-[18px] px-1 flex justify-start items-center text-[#191C1C] hover:bg-[#191C1C] hover:text-white transition-all"
+                href="">
+                <i class="fa-regular text-sm fa-moon"></i>
+               </a>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+
+        <div class="items-center flex max-xs:flex-wrap justify-center gap-6">
+            <a href=""><i class="fa-brands text-blue-500 text-[22px] mb-5 fa-facebook"></i></a>
+            <a href=""><i class="fa-brands text-black text-[22px] mb-5 fa-x-twitter"></i></a>
+            <a href=""><i class="fa-brands text-blue-400 text-[22px] mb-5 fa-telegram"></i></a>
+            <a href=""><i class="fa-brands text-green-600 text-[22px] mb-5 fa-square-whatsapp"></i></a>
+            <a href=""><i class="fa-brands text-orange-600 text-[22px] mb-5 fa-instagram"></i></a>
+        </div>
+
+       
+    <ul class="grid grid-cols-6 max-scr:grid-cols-3 gap-5 py-[5px] max-sm:grid-cols-2 px-[16px] text-[#051d39] container mx-auto mb-16">
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Ana səhifə</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Siyasət</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>İqtisadiyyat</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Cəmiyyət</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Ordu</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Şou-biznes</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Kriminal</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>İdman</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Mədəniyyət</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Dünya</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Hadisə</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Müsahibə</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Turizm</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>İKT</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Baku TV</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[4px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>CineMastercard</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Digər</li></a>
+        <a class="rounded-[30px] text-[16px] max-xs:text-[12px] max-xs:p-[2px] p-2 flex items-center justify-center border border-gray-300 font-[600] hover:bg-gray-200" href=""><li>Maraqlı</li></a>
+    </ul>
+
+    <div class="grid grid-cols-3 gap-8 text-gray-500">
+        <div class="bg-[#e8e8e8] max-w-[100px] max-xs:w-[80px] rounded-lg p-2">
+          <div class="flex items-center justify-center p-2">
+            <i class="fa-solid fa-circle-info"></i>
+          </div>
+            <p class="text-center max-xs:text-[12px]">Haqqımızda</p>
+        </div>
+
+        <div class="bg-[#e8e8e8] max-w-[100px] max-xs:w-[80px] rounded-lg p-2">
+            <div class="flex items-center justify-center p-2">
+                <i class="fa-solid fa-bullhorn"></i>
+            </div>
+            <p class="text-center">Reklam</p>
+        </div>
+        
+        <div class="bg-[#e8e8e8] max-w-[100px] max-xs:w-[70px] rounded-lg p-2">
+            <div class="flex items-center justify-center p-2">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <p class="text-center">Əlaqə</p>
+        </div>
+    </div>
+
+    </div>
+        
+
+    </header>
+
+    <main class="mt-20 max-w-[1200px] mx-auto">
+        <section id="detailsCards"></section>
+    </main>
+
+    <footer class="px-6 py-10 mt-10 bg-[#eff1f0] dark:text-gray-800">
+        <div class="container grid grid-cols-4 mx-auto gap-8 max-lg:grid-cols-2 max-sm:grid-cols-1">
+           <a href="#">
+            <img class="max-w-[270px]" src="../img/footer-logo.svg" alt="footer-logo" />
+           </a>
+
+            <div class="flex flex-col space-y-4">
+                <h2 class="text-[17px]">Bütün hüquqlar qorunur &copy; 2013-2025</h2>
+               
+                <div class="flex flex-col space-y-2 text-[16px] ">
+                    <p class="max-w-[350px]">Oxu.Az 24 saat ərzində, Azərbaycan, türk və rus dillərində, ölkədə və dünyada baş verən ən aktual və maraqlı hadisələr barədə operativ xəbərlər, oxucuları və cəmiyyəti maraqlandıran suallara cavablar, analitik məqalələr, foto və videohesabatlar hazırlayır.</p>
+                </div>
+
+                <div class="grid grid-cols-3">
+                    <a href=""><i class="fa-brands text-blue-500 text-[22px] mb-5 fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands text-blue-400 text-[22px] mb-5 fa-telegram"></i></a>
+                    <a href=""><i class="fa-brands text-green-600 text-[22px] mb-5 fa-square-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands text-orange-600 text-[22px] mb-5 fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands text-gray-500 text-[22px] mb-5 fa-apple"></i></a>
+                    <a href=""><i class="fa-brands text-green-600 text-[22px] mb-5 fa-google-play"></i></a>
+               </div>
+            </div>
+
+            <div class="flex flex-col space-y-4">
+                    <div>
+                        <h3 class="text-[#191c1c] font-[500]">Karyera</h3>
+                        <a class="text-[#313131] underline" href="">cv@oxu.az</a>
+                    </div>
+                    <div>
+                        <h3 class="text-[#191c1c] font-[500]">Ümumi sorğular üçün</h3>
+                        <p class="text-[#313131] underline"><a href="">editor@oxu.az</a></p>
+                        <p class="text-[#313131] underline"><a href="">055 224 76 86</a></p>
+                    </div>
+            </div>
+            <div class="flex flex-col space-y-4">
+                <div class="flex flex-col space-y-2 text-[17px]">
+                    <a class="underline" rel="noopener noreferrer" href="#">Saytda reklam</a>
+                    <a class="underline" rel="noopener noreferrer" href="#">Bizimlə əlaqə</a>
+                    <a class="underline" rel="noopener noreferrer" href="#">Məxfilik siyasəti</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/details.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+</html>
