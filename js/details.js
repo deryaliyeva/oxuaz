@@ -25,10 +25,15 @@ function getDetailsCard(img, date, view, title, description) {
                                 <span>${view}</span>
                             </div>
                     </div>
-    
                     <div>
                         <h2 class="mt-5 mb-1 text-xl font-semibold">${title}</h2>
                         <p class="text-gray-600">${description}</p>
                     </div>
+
+                    <button onclick="toBack()" class="bg-[#1894A0] text-white py-3 rounded-lg max-w-[200px]">Back To Homepage</button>
             </div>`
+}
+
+function toBack() {
+    window.location.href = '/index.htm'
 }
